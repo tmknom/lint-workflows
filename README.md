@@ -8,6 +8,16 @@ A collection of lint workflows implemented as Reusable Workflows for GitHub Acti
 
 ## Usage
 
+### Composite Action
+
+```yaml
+jobs:
+  call:
+    uses: tmknom/lint-workflows/.github/workflows/composite-action.yml@v0
+    permissions:
+      contents: read
+```
+
 ### Reusable Workflows
 
 ```yaml
