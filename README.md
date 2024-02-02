@@ -1,14 +1,26 @@
-# template-reusable-workflows
+# lint-workflows
 
 Template repository for Reusable Workflows.
 
 ## Description
 
-Template repository for creating Reusable Workflows with GitHub Actions.
+A collection of lint workflows implemented as Reusable Workflows for GitHub Actions.
+
+## Usage
+
+### Reusable Workflows
+
+```yaml
+jobs:
+  call:
+    uses: tmknom/lint-workflows/.github/workflows/reusable-workflows.yml@v0
+    permissions:
+      contents: read
+```
 
 ## Release notes
 
-See [Releases](https://github.com/tmknom/template-reusable-workflows/releases).
+See [Releases](https://github.com/tmknom/lint-workflows/releases).
 
 ## License
 
