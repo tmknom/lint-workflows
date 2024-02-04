@@ -21,7 +21,7 @@ jobs:
       - name: Cross Yamllint
         uses: tmknom/cross-yamllint-action@25e35ab1a88da98298cee8265ba69e8df63e6c29 # v0.2.1
         with:
-          configuration-url: https://raw.githubusercontent.com/tmknom/cross-yamllint-action/v0.2.1/configurations/reusable-workflows.yml
+          configuration-url: https://raw.githubusercontent.com/tmknom/configurations/main/yamllint/reusable-workflows.yml
 
       - name: Run actionlint
         run: |
