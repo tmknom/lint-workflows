@@ -1,0 +1,15 @@
+name: Lint GitHub Actions
+on:
+  workflow_call:
+
+permissions: {}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  call:
+    uses: tmknom/lint-workflows/.github/workflows/reusable-workflows.yml@v0
+    permissions:
+      contents: read
