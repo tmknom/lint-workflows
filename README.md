@@ -28,6 +28,13 @@ jobs:
       contents: read
 ```
 
+## Related projects
+
+- [configurations](https://github.com/tmknom/configurations): Collection of configurations.
+- [template-composite-action](https://github.com/tmknom/template-composite-action): Template repository for Composite Action.
+- [template-reusable-workflows](https://github.com/tmknom/template-reusable-workflows): Template repository for Reusable Workflows.
+- [cross-yamllint-action](https://github.com/tmknom/cross-yamllint-action): Run [yamllint][yamllint] with configuration shared across repositories.
+
 ## Release notes
 
 See [GitHub Releases][releases].
@@ -36,4 +43,5 @@ See [GitHub Releases][releases].
 
 Apache 2 Licensed. See [LICENSE](LICENSE) for full details.
 
+[yamllint]: https://github.com/adrienverge/yamllint
 [releases]: https://github.com/tmknom/lint-workflows/releases
