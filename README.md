@@ -1,6 +1,6 @@
 # lint-workflows
 
-Template repository for Reusable Workflows.
+A collection of lint workflows.
 
 ## Description
 
