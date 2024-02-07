@@ -9,7 +9,22 @@ defaults:
     shell: bash
 
 jobs:
-  call:
-    uses: tmknom/lint-workflows/.github/workflows/reusable-workflows.yml@v0
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
       contents: read
+    steps:
+      - name: Checkout
+        uses: tmknom/checkout-action@v1
+
+      - name: Cross Yamllint
+        uses: tmknom/cross-yamllint-action@25e35ab1a88da98298cee8265ba69e8df63e6c29 # v0.2.1
+        with:
+          configuration-url: https://raw.githubusercontent.com/tmknom/configurations/v0.3.0/yamllint/github-actions.yml
+
+      - name: Run actionlint
+        run: |
+          set -x
+          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
+          ./actionlint -color
