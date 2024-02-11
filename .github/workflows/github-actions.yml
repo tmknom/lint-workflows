@@ -1,6 +1,10 @@
 name: Lint GitHub Actions
 on:
   workflow_call:
+    outputs:
+      yamllint-configuration-sha256:
+        value: ${{ jobs.lint.outputs.yamllint-configuration-sha256 }}
+        description: SHA256 of the configuration file to passing yamllint.
 
 permissions: {}
 
@@ -14,11 +18,14 @@ jobs:
     timeout-minutes: 5
     permissions:
       contents: read
+    outputs:
+      yamllint-configuration-sha256: ${{ steps.yamllint.outputs.configuration-sha256 }}
     steps:
       - name: Checkout
         uses: tmknom/checkout-action@v1
 
       - name: Cross Yamllint
+        id: yamllint
         uses: tmknom/cross-yamllint-action@4140cdcbc0cf1bcc05e15a7f5b3822314df48486 # v0.3.0
         with:
           configuration-url: https://raw.githubusercontent.com/tmknom/configurations/v0.3.0/yamllint/github-actions.yml
