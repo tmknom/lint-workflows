@@ -1,0 +1,22 @@
+name: Test
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - .github/workflows/_internal-test.yml
+
+permissions: {}
+
+jobs:
+  github-actions:
+    uses: ./.github/workflows/_internal-test-github-actions.yml
+    permissions:
+      contents: read
+  composite-action:
+    uses: ./.github/workflows/_internal-test-composite-action.yml
+    permissions:
+      contents: read
+  reusable-workflows:
+    uses: ./.github/workflows/_internal-test-reusable-workflows.yml
+    permissions:
+      contents: read
