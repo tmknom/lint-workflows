@@ -30,8 +30,5 @@ jobs:
         with:
           configuration-url: https://raw.githubusercontent.com/tmknom/configurations/v0.3.0/yamllint/composite-action.yml
 
-      - name: Run actionlint
-        run: |
-          set -x
-          bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
-          ./actionlint -color
+      - name: Secure actionlint
+        uses: tmknom/secure-actionlint-action@87e303e3f6a0abc082812068119eee7e8f24630e # v0.1.0
