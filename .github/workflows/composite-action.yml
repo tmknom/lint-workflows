@@ -22,7 +22,7 @@ jobs:
       yamllint-configuration-sha256: ${{ steps.yamllint.outputs.configuration-sha256 }}
     steps:
       - name: Checkout
-        uses: tmknom/checkout-action@v1
+        uses: tmknom/secure-checkout-action@v1
 
       - name: Cross Yamllint
         id: yamllint
