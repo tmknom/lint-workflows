@@ -26,9 +26,9 @@ jobs:
 
       - name: Cross Yamllint
         id: yamllint
-        uses: tmknom/cross-yamllint-action@4140cdcbc0cf1bcc05e15a7f5b3822314df48486 # v0.3.0
+        uses: tmknom/cross-yamllint-action@0b5aaf54ed9d35655bc993f596759f997eace4d9 # v0.3.1
         with:
-          configuration-url: https://raw.githubusercontent.com/tmknom/configurations/v0.3.0/yamllint/reusable-workflows.yml
+          configuration-url: https://raw.githubusercontent.com/tmknom/configurations/128cc66301fe96e449a1e284bb78d5e2ecfb96f2/yamllint/reusable-workflows.yml # v0.6.0
 
       - name: Secure actionlint
-        uses: tmknom/secure-actionlint-action@23ef4b1bfd498bb9fadbfeab1d881c565f6ee36f # v0.3.1
+        uses: tmknom/secure-actionlint-action@1845111bba094a78635844f2c91047e1f64218b6 # v0.4.0
